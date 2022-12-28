@@ -1,6 +1,7 @@
 ﻿using FinalProject.Business.Abstract;
 using FinalProject.Business.Concrete;
 using FinalProject.DataAccess.Concrete;
+using FinalProject.Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,7 +24,16 @@ namespace FinalProject.FormUI
         IBranchService _branchService;
         private void button1_Click(object sender, EventArgs e)
         {
-
+            int id = Convert.ToInt32(textBox1.Text.Trim());
+            string name = textBox1.Text.Trim();
+            _branchService.Add(
+                new Branch
+                {
+                    ID = id,
+                    Name = name,
+                }
+                );
+            LoadBranches();
         }
 
         private void testform_Load(object sender, EventArgs e)
