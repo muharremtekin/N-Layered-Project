@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IEntity.cs" />
+    <Compile Include="Concrete\Branch.cs" />
     <Compile Include="Concrete\Parent.cs" />
     <Compile Include="Concrete\Student.cs" />
     <Compile Include="Concrete\Teacher.cs" />

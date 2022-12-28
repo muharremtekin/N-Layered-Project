@@ -8,6 +8,7 @@ namespace FinalProject.DataAccess.Concrete
         public DbSet<Student> Students { get; set; }
         public DbSet<Parent> Parents { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
+        public DbSet<Branch> Branches { get; set; }
 
     }
 }

@@ -98,12 +98,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LoginForms\SelectLoginTypeForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginForms\SelectLoginTypeForm.Designer.cs">
-      <DependentUpon>SelectLoginTypeForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +118,12 @@
     <Compile Include="LoginForms\TeacherLoginForm.Designer.cs">
       <DependentUpon>TeacherLoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="testform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="testform.Designer.cs">
+      <DependentUpon>testform.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +138,9 @@
     </Compile>
     <EmbeddedResource Include="LoginForms\TeacherLoginForm.resx">
       <DependentUpon>TeacherLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="testform.resx">
+      <DependentUpon>testform.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -156,6 +159,20 @@
   <ItemGroup>
     <Folder Include="StudentForms\" />
     <Folder Include="TeacherForms\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FinalProject.Business\FinalProject.Business.csproj">
+      <Project>{C6F12170-E1BD-4773-A883-B43C5B79C7A7}</Project>
+      <Name>FinalProject.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FinalProject.DataAccess\FinalProject.DataAccess.csproj">
+      <Project>{E51F198C-DA37-4DD1-B278-E0D67388E6D0}</Project>
+      <Name>FinalProject.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FinalProject.Entities\FinalProject.Entities.csproj">
+      <Project>{C41EDED4-A54B-4C96-B2A1-E4367872200C}</Project>
+      <Name>FinalProject.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

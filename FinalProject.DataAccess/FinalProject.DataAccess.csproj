@@ -94,10 +94,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IBranchDal.cs" />
     <Compile Include="Abstract\IEntityRepository.cs" />
     <Compile Include="Abstract\IParentDal.cs" />
     <Compile Include="Abstract\IStudentDal.cs" />
     <Compile Include="Abstract\ITeacherDal.cs" />
+    <Compile Include="Concrete\EfBranchDal.cs" />
     <Compile Include="Concrete\EfEntityRepositoryBase.cs" />
     <Compile Include="Concrete\EfParentDal.cs" />
     <Compile Include="Concrete\EfTeacherDal.cs" />
