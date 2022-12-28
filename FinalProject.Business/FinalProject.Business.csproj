@@ -41,13 +41,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IBranchService.cs" />
+    <Compile Include="Abstract\IParentService.cs" />
+    <Compile Include="Abstract\IStudentService.cs" />
     <Compile Include="Abstract\ITeacherService.cs" />
+    <Compile Include="Concrete\BranchManager.cs" />
+    <Compile Include="Concrete\ParentManager.cs" />
+    <Compile Include="Concrete\StudentManager.cs" />
+    <Compile Include="Concrete\TeacherManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Concrete\" />
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\FinalProject.DataAccess\FinalProject.DataAccess.csproj">
+      <Project>{E51F198C-DA37-4DD1-B278-E0D67388E6D0}</Project>
+      <Name>FinalProject.DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FinalProject.Entities\FinalProject.Entities.csproj">
       <Project>{C41EDED4-A54B-4C96-B2A1-E4367872200C}</Project>
       <Name>FinalProject.Entities</Name>

@@ -12,5 +12,8 @@ namespace FinalProject.Business.Abstract
         List<Teacher> GetAll();
         List<Teacher> GetTeacherByBranch(int branchId);
         List<Teacher> GetTeacherByTeacherName(string teacherName);
+        void Add(Teacher teacher);
+        void Delete(Teacher teacher);
+        void Update(Teacher teacher);
     }
 }

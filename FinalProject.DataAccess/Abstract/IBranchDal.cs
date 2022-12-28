@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FinalProject.DataAccess.Abstract
 {
-    public interface ITeacherDal : IEntityRepository<Teacher>
+    public interface IBranchDal : IEntityRepository<Branch>
     {
     }
 }
