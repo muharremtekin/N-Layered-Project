@@ -9,6 +9,7 @@ namespace FinalProject.Business.Abstract
 {
     public interface IStudentService
     {
+        List<Student> LoginStudent(string mail, string password);
         List<Student> GetAll();
         List<Student> GetStudentById(int studentId);
         List<Student> GetTeacherByTeacherName(string studentName);

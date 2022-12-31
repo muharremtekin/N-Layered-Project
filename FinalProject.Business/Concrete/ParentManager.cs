@@ -25,7 +25,7 @@ namespace FinalProject.Business.Concrete
 
         public void Delete(Parent parent)
         {
-            throw new NotImplementedException();
+            _parentDal.Delete(parent);
         }
 
         public List<Parent> GetAll()
@@ -40,7 +40,7 @@ namespace FinalProject.Business.Concrete
 
         public void Update(Parent parent)
         {
-            throw new NotImplementedException();
+            _parentDal.Update(parent);
         }
     }
 }

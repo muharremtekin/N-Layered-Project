@@ -9,6 +9,8 @@ namespace FinalProject.Business.Abstract
 {
     public interface ITeacherService
     {
+        Teacher GetTeacherByMail(string mail);
+        List<Teacher> LoginTeacher(string mail, string password);
         List<Teacher> GetAll();
         List<Teacher> GetTeacherByBranch(int branchId);
         List<Teacher> GetTeacherByTeacherName(string teacherName);

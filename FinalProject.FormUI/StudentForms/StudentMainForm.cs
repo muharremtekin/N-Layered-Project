@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FinalProject.FormUI.TeacherForms
+namespace FinalProject.FormUI.StudentForms
 {
-    public partial class TeacherLoginForm : Form
+    public partial class StudentMainForm : Form
     {
-        public TeacherLoginForm()
+        public StudentMainForm()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
