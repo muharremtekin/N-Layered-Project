@@ -16,7 +16,7 @@ namespace FinalProject.FormUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new testform());
+            Application.Run(new LoginForm());
         }
     }
 }

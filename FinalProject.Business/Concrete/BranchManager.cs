@@ -33,14 +33,14 @@ namespace FinalProject.Business.Concrete
             return _branchDal.GetAll();
         }
 
-        public List<Branch> GetParentByName(string branchName)
+        public List<Branch> GetBranchByName(string branchName)
         {
             return _branchDal.GetAll(b => b.Name == branchName);
         }
 
-        public void Update(Branch branch)
+        public void Update(string branchName)
         {
-            throw new NotImplementedException();
+
         }
     }
 }

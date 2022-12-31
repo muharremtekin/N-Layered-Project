@@ -13,8 +13,9 @@ namespace FinalProject.Entities.Concrete
         public string Name { get; set; }
         public string PhoneNumber { get; set; }
         public string Mail { get; set; }
+        public string Password { get; set; }
         public string Gender { get; set; }
         public DateTime DateOfBirth { get; set; }
-        public int parent_ID { get; set; }
+        public int Parent_ID { get; set; }
     }
 }
