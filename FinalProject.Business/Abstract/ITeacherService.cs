@@ -9,7 +9,7 @@ namespace FinalProject.Business.Abstract
 {
     public interface ITeacherService
     {
-        Teacher GetTeacherByMail(string mail);
+        List<Teacher> GetTeacherByMail(string mail);
         List<Teacher> LoginTeacher(string mail, string password);
         List<Teacher> GetAll();
         List<Teacher> GetTeacherByBranch(int branchId);
@@ -17,5 +17,7 @@ namespace FinalProject.Business.Abstract
         void Add(Teacher teacher);
         void Delete(Teacher teacher);
         void Update(Teacher teacher);
+        bool CheckStudent(string mail);
+        List<Teacher> GetTeacherById(int teachertId);
     }
 }

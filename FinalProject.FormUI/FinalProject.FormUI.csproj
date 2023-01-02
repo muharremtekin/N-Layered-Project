@@ -105,19 +105,31 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StudentForms\StudentMainForm.cs">
+    <Compile Include="TeacherForms\SearchStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentForms\StudentMainForm.Designer.cs">
-      <DependentUpon>StudentMainForm.cs</DependentUpon>
+    <Compile Include="TeacherForms\SearchStudentForm.Designer.cs">
+      <DependentUpon>SearchStudentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherForms\SearchTeacherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherForms\SearchTeacherForm.Designer.cs">
+      <DependentUpon>SearchTeacherForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherForms\StudentAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherForms\StudentAddForm.Designer.cs">
+      <DependentUpon>StudentAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherForms\TeacherAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherForms\TeacherAddForm.Designer.cs">
+      <DependentUpon>TeacherAddForm.cs</DependentUpon>
     </Compile>
     <Compile Include="TeacherForms\TeacherMainForm.cs">
       <SubType>Form</SubType>
@@ -125,11 +137,20 @@
     <Compile Include="TeacherForms\TeacherMainForm.Designer.cs">
       <DependentUpon>TeacherMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TeacherForms\UpdateStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherForms\UpdateStudentForm.Designer.cs">
+      <DependentUpon>UpdateStudentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherForms\UpdateTeacherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherForms\UpdateTeacherForm.Designer.cs">
+      <DependentUpon>UpdateTeacherForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -140,11 +161,26 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="StudentForms\StudentMainForm.resx">
-      <DependentUpon>StudentMainForm.cs</DependentUpon>
+    <EmbeddedResource Include="TeacherForms\SearchStudentForm.resx">
+      <DependentUpon>SearchStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherForms\SearchTeacherForm.resx">
+      <DependentUpon>SearchTeacherForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherForms\StudentAddForm.resx">
+      <DependentUpon>StudentAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherForms\TeacherAddForm.resx">
+      <DependentUpon>TeacherAddForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TeacherForms\TeacherMainForm.resx">
       <DependentUpon>TeacherMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherForms\UpdateStudentForm.resx">
+      <DependentUpon>UpdateStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherForms\UpdateTeacherForm.resx">
+      <DependentUpon>UpdateTeacherForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

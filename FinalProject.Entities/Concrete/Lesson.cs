@@ -5,13 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FinalProject.Entities.Concrete
+namespace FinalProject.DataAccess.Concrete
 {
-    public class Parent : IEntity
+    public class Lesson : IEntity
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public string Phone_Number { get; set; }
-
     }
 }

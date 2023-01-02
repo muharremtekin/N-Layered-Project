@@ -105,6 +105,7 @@
     <Compile Include="Concrete\EfTeacherDal.cs" />
     <Compile Include="Concrete\FinalProjectContext.cs" />
     <Compile Include="Concrete\EfStudentDal.cs" />
+    <Compile Include="Concrete\Lesson.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -16,6 +16,7 @@ namespace FinalProject.Entities.Concrete
         public string Password { get; set; }
         public string Gender { get; set; }
         public DateTime Date_Of_Birth { get; set; }
+        public string Adress { get; set; }
         public int BranchID { get; set; }
     }
 }
