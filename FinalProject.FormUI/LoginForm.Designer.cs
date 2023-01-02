@@ -105,6 +105,7 @@ namespace FinalProject.FormUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(324, 181);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnTeacherLogin);
@@ -113,6 +114,7 @@ namespace FinalProject.FormUI
             this.Controls.Add(this.tbxMail);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblMail);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giriş";

@@ -7,11 +7,9 @@ using System.Threading.Tasks;
 
 namespace FinalProject.Entities.Concrete
 {
-    public class Parent : IEntity
+    public class LessonsLearn : IEntity
     {
-        public int ID { get; set; }
-        public string Name { get; set; }
-        public string Phone_Number { get; set; }
-
+        public int LessonID { get; set; }
+        public int StudentID { get; set; }
     }
 }

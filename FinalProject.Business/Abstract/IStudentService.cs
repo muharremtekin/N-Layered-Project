@@ -12,10 +12,12 @@ namespace FinalProject.Business.Abstract
         List<Student> LoginStudent(string mail, string password);
         List<Student> GetAll();
         List<Student> GetStudentById(int studentId);
-        List<Student> GetTeacherByTeacherName(string studentName);
+        List<Student> GetStudentByStudentName(string studentName);
+        bool CheckStudent(string mail);
+        Student Get(int id);
         void Add(Student student);
         void Delete(Student student);
         void Update(Student student);
-
+        List<Student> GetStudentByParentId(int parentId);
     }
 }

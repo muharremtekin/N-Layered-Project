@@ -23,6 +23,15 @@ namespace FinalProject.Business.Concrete
             _teacherDal.Add(teacher);
         }
 
+        public bool CheckStudent(string mail)
+        {
+            var _ = _teacherDal.Get(s => s.Mail == mail);
+            if (_.Mail == mail)
+                return true;
+            else
+                return false;
+        }
+
         public void Delete(Teacher teacher)
         {
             _teacherDal.Delete(teacher);
@@ -35,17 +44,23 @@ namespace FinalProject.Business.Concrete
 
         public List<Teacher> GetTeacherByBranch(int branchId)
         {
+
             return _teacherDal.GetAll(t => t.BranchID == branchId);
         }
 
-        public Teacher GetTeacherByMail(string mail)
+        public List<Teacher> GetTeacherById(int teachertId)
         {
-            throw new NotImplementedException();
+            return _teacherDal.GetAll(t => t.ID == teachertId);
+        }
+
+        public List<Teacher> GetTeacherByMail(string mail)
+        {
+            return _teacherDal.GetAll(t => t.Mail == mail);
         }
 
         public List<Teacher> GetTeacherByTeacherName(string teacherName)
         {
-            return _teacherDal.GetAll(t => t.Name == teacherName);
+            return _teacherDal.GetAll(t => t.Name.ToLower().Contains(teacherName.ToLower()));
         }
 
         public List<Teacher> LoginTeacher(string mail, string password)
