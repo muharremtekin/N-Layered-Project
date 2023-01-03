@@ -48,6 +48,7 @@ namespace FinalProject.FormUI.TeacherForms
             this.label8 = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwStudents)).BeginInit();
             this.SuspendLayout();
             // 
@@ -251,11 +252,25 @@ namespace FinalProject.FormUI.TeacherForms
             this.label2.TabIndex = 16;
             this.label2.Text = "ÖĞRENCİ GÜNCELLE";
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.Red;
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(863, 9);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(87, 31);
+            this.btnBack.TabIndex = 23;
+            this.btnBack.Text = "Geri";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // UpdateStudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 566);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cbxGender);
@@ -277,6 +292,7 @@ namespace FinalProject.FormUI.TeacherForms
             this.Controls.Add(this.dgwStudents);
             this.Name = "UpdateStudentForm";
             this.Text = "UpdateStudentForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UpdateStudentForm_FormClosing);
             this.Load += new System.EventHandler(this.UpdateStudentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwStudents)).EndInit();
             this.ResumeLayout(false);
@@ -305,5 +321,6 @@ namespace FinalProject.FormUI.TeacherForms
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnBack;
     }
 }

@@ -82,5 +82,16 @@ namespace FinalProject.FormUI.TeacherForms
             rtbxAdress.Text = student[0].Adress;
             dtpBirthday.Value = student[0].DateOfBirth;
         }
+
+        private void UpdateStudentForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Router.teacherMainForm.Show();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Router.teacherMainForm.Show();
+            this.Hide();
+        }
     }
 }

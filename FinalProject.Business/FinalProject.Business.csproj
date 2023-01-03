@@ -42,10 +42,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IBranchService.cs" />
+    <Compile Include="Abstract\ILessonLearnService.cs" />
+    <Compile Include="Abstract\ILessonService.cs" />
+    <Compile Include="Abstract\ILessonTaughtService.cs" />
     <Compile Include="Abstract\IParentService.cs" />
     <Compile Include="Abstract\IStudentService.cs" />
     <Compile Include="Abstract\ITeacherService.cs" />
     <Compile Include="Concrete\BranchManager.cs" />
+    <Compile Include="Concrete\LessonLearnManager.cs" />
+    <Compile Include="Concrete\LessonManager.cs" />
+    <Compile Include="Concrete\LessonTaughtManager.cs" />
     <Compile Include="Concrete\ParentManager.cs" />
     <Compile Include="Concrete\StudentManager.cs" />
     <Compile Include="Concrete\TeacherManager.cs" />

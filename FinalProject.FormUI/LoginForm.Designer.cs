@@ -44,6 +44,7 @@ namespace FinalProject.FormUI
             this.tbxMail.Name = "tbxMail";
             this.tbxMail.Size = new System.Drawing.Size(191, 20);
             this.tbxMail.TabIndex = 0;
+            this.tbxMail.Text = "betulcetin@gmail.com";
             // 
             // tbxPassword
             // 
@@ -51,6 +52,7 @@ namespace FinalProject.FormUI
             this.tbxPassword.Name = "tbxPassword";
             this.tbxPassword.Size = new System.Drawing.Size(191, 20);
             this.tbxPassword.TabIndex = 1;
+            this.tbxPassword.Text = "1234";
             this.tbxPassword.UseSystemPasswordChar = true;
             // 
             // lblMail
@@ -118,6 +120,7 @@ namespace FinalProject.FormUI
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giriş";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginForm_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

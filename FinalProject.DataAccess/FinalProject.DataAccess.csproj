@@ -96,16 +96,21 @@
   <ItemGroup>
     <Compile Include="Abstract\IBranchDal.cs" />
     <Compile Include="Abstract\IEntityRepository.cs" />
+    <Compile Include="Abstract\ILessonDal.cs" />
+    <Compile Include="Abstract\ILessonLearnDal.cs" />
+    <Compile Include="Abstract\ILessonTaughtDal.cs" />
     <Compile Include="Abstract\IParentDal.cs" />
     <Compile Include="Abstract\IStudentDal.cs" />
     <Compile Include="Abstract\ITeacherDal.cs" />
     <Compile Include="Concrete\EfBranchDal.cs" />
     <Compile Include="Concrete\EfEntityRepositoryBase.cs" />
+    <Compile Include="Concrete\EfLessonDal.cs" />
+    <Compile Include="Concrete\EfLessonsLearnDal.cs" />
+    <Compile Include="Concrete\EfLessonTaughtDal.cs" />
     <Compile Include="Concrete\EfParentDal.cs" />
     <Compile Include="Concrete\EfTeacherDal.cs" />
     <Compile Include="Concrete\FinalProjectContext.cs" />
     <Compile Include="Concrete\EfStudentDal.cs" />
-    <Compile Include="Concrete\Lesson.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

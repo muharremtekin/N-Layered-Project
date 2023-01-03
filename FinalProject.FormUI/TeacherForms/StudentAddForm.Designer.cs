@@ -47,6 +47,7 @@ namespace FinalProject.FormUI.TeacherForms
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.cbxGender = new System.Windows.Forms.ComboBox();
+            this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbxNameSurname
@@ -235,11 +236,25 @@ namespace FinalProject.FormUI.TeacherForms
             this.cbxGender.Size = new System.Drawing.Size(160, 28);
             this.cbxGender.TabIndex = 5;
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.Red;
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(354, 15);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(87, 31);
+            this.btnBack.TabIndex = 7;
+            this.btnBack.Text = "Geri";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // StudentAddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(453, 484);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.cbxGender);
             this.Controls.Add(this.cbxParents);
             this.Controls.Add(this.rtbxAdress);
@@ -263,6 +278,7 @@ namespace FinalProject.FormUI.TeacherForms
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "StudentAddForm";
             this.Text = "StudentAddForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StudentAddForm_FormClosing);
             this.Load += new System.EventHandler(this.StudentAddForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -289,5 +305,6 @@ namespace FinalProject.FormUI.TeacherForms
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cbxGender;
+        private System.Windows.Forms.Button btnBack;
     }
 }

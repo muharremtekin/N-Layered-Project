@@ -1,4 +1,5 @@
-﻿using FinalProject.FormUI.TeacherForms;
+﻿
+using FinalProject.FormUI.TeacherForms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace FinalProject.FormUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UpdateTeacherForm());
+            Application.Run(new LoginForm());
         }
     }
 }

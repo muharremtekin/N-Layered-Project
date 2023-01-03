@@ -35,14 +35,15 @@ namespace FinalProject.FormUI.TeacherForms
             this.label1 = new System.Windows.Forms.Label();
             this.cbxParents = new System.Windows.Forms.ComboBox();
             this.dgwStudents = new System.Windows.Forms.DataGridView();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwStudents)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(95, 117);
+            this.button1.Location = new System.Drawing.Point(95, 105);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 23);
+            this.button1.Size = new System.Drawing.Size(151, 45);
             this.button1.TabIndex = 10;
             this.button1.Text = "Hepsini getir";
             this.button1.UseVisualStyleBackColor = true;
@@ -97,19 +98,35 @@ namespace FinalProject.FormUI.TeacherForms
             this.dgwStudents.Size = new System.Drawing.Size(846, 282);
             this.dgwStudents.TabIndex = 5;
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.Red;
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(770, 12);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(87, 31);
+            this.btnBack.TabIndex = 11;
+            this.btnBack.Text = "Geri";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // SearchStudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(869, 450);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tbxName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbxParents);
             this.Controls.Add(this.dgwStudents);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "SearchStudentForm";
             this.Text = "SearchStudentForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SearchStudentForm_FormClosing);
             this.Load += new System.EventHandler(this.SearchStudentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwStudents)).EndInit();
             this.ResumeLayout(false);
@@ -125,5 +142,6 @@ namespace FinalProject.FormUI.TeacherForms
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbxParents;
         private System.Windows.Forms.DataGridView dgwStudents;
+        private System.Windows.Forms.Button btnBack;
     }
 }
