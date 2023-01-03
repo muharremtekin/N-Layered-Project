@@ -20,5 +20,6 @@ namespace FinalProject.FormUI
         public static LessonAddForm lessonForm = new LessonAddForm();
         public static LoginForm loginForm = new LoginForm();
         public static CurrentUser currentUserForm = new CurrentUser();
+        public static StudentMainForm studentMainForm = new StudentMainForm();
     }
 }

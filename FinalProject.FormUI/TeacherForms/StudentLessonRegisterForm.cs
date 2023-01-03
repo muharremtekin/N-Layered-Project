@@ -25,7 +25,7 @@ namespace FinalProject.FormUI.TeacherForms
         ILessonTaughtService _lessonTaughtService;
         private void StudentLessonRegisterForm_Load(object sender, EventArgs e)
         {
-            comboBox1.DataSource = _lessonTaughtService.GetAll();
+            //comboBox1.DataSource = _lessonTaughtService.GetLessonByTeacherId(CurrentUser.currentStudent.ID);
         }
     }
 }
