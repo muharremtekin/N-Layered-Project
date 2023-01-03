@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FinalProject.DataAccess.Concrete
+namespace FinalProject.Entities.Concrete
 {
     public class Lesson : IEntity
     {

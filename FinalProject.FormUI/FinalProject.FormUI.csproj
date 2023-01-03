@@ -85,6 +85,7 @@
     </Reference>
     <Reference Include="System.Security" />
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -99,6 +100,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CurrentUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CurrentUser.Designer.cs">
+      <DependentUpon>CurrentUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +114,25 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Router.cs" />
+    <Compile Include="Student_Forms\StudentMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student_Forms\StudentMainForm.Designer.cs">
+      <DependentUpon>StudentMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherForms\LessonAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherForms\LessonAddForm.Designer.cs">
+      <DependentUpon>LessonAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherForms\ParentAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherForms\ParentAddForm.Designer.cs">
+      <DependentUpon>ParentAddForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TeacherForms\SearchStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +151,18 @@
     <Compile Include="TeacherForms\StudentAddForm.Designer.cs">
       <DependentUpon>StudentAddForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TeacherForms\StudentLessonRegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherForms\StudentLessonRegisterForm.Designer.cs">
+      <DependentUpon>StudentLessonRegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherForms\StudentMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherForms\StudentMainForm.Designer.cs">
+      <DependentUpon>StudentMainForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TeacherForms\TeacherAddForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,18 +175,21 @@
     <Compile Include="TeacherForms\TeacherMainForm.Designer.cs">
       <DependentUpon>TeacherMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TeacherForms\TeacherUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherForms\TeacherUpdateForm.Designer.cs">
+      <DependentUpon>TeacherUpdateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TeacherForms\UpdateStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TeacherForms\UpdateStudentForm.Designer.cs">
       <DependentUpon>UpdateStudentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TeacherForms\UpdateTeacherForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TeacherForms\UpdateTeacherForm.Designer.cs">
-      <DependentUpon>UpdateTeacherForm.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="CurrentUser.resx">
+      <DependentUpon>CurrentUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,6 +202,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TeacherForms\LessonAddForm.resx">
+      <DependentUpon>LessonAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherForms\ParentAddForm.resx">
+      <DependentUpon>ParentAddForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TeacherForms\SearchStudentForm.resx">
       <DependentUpon>SearchStudentForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,17 +217,23 @@
     <EmbeddedResource Include="TeacherForms\StudentAddForm.resx">
       <DependentUpon>StudentAddForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TeacherForms\StudentLessonRegisterForm.resx">
+      <DependentUpon>StudentLessonRegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherForms\StudentMainForm.resx">
+      <DependentUpon>StudentMainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TeacherForms\TeacherAddForm.resx">
       <DependentUpon>TeacherAddForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TeacherForms\TeacherMainForm.resx">
       <DependentUpon>TeacherMainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TeacherForms\TeacherUpdateForm.resx">
+      <DependentUpon>TeacherUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TeacherForms\UpdateStudentForm.resx">
       <DependentUpon>UpdateStudentForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TeacherForms\UpdateTeacherForm.resx">
-      <DependentUpon>UpdateTeacherForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

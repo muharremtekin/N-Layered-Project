@@ -44,12 +44,15 @@ namespace FinalProject.FormUI.TeacherForms
             string gender = cbxGender.SelectedItem.ToString();
             DateTime birthday = dtpBirthday.Value;
             int parent_id = Convert.ToInt32(cbxParents.SelectedValue);
-            if (flname != "" && phone != "" && mail != "" && pass != "" && gender != "" && birthday != null)
+            string adress = rtbxAdress.Text;
+            if (flname != "" && phone != "" && mail != "" && pass != "" && gender != "" && birthday != null && adress != "")
             {
-                Student student = new Student { Name = flname, PhoneNumber = phone, Mail = mail, Password = pass, Gender = gender, DateOfBirth = birthday, Parent_ID = parent_id };
+                Student student = new Student { Name = flname, PhoneNumber = phone, Mail = mail, Password = pass, Gender = gender, DateOfBirth = birthday, Adress = adress, Parent_ID = parent_id };
                 _studentService.Add(student);
                 checkStudent(student.Mail);
             }
+            else
+                MessageBox.Show("Boş alan bırakmayın!", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         void checkStudent(string mail)
         {
@@ -57,6 +60,17 @@ namespace FinalProject.FormUI.TeacherForms
                 MessageBox.Show("Kayıt Başarılı", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
                 MessageBox.Show("Kayıt başarısız!", "Başarısız", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void StudentAddForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Router.teacherMainForm.Show();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Router.teacherMainForm.Show();
+            this.Hide();
         }
     }
 }

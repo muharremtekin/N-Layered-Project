@@ -30,16 +30,18 @@ namespace FinalProject.FormUI.TeacherForms
             string phone = tbxPhone.Text.Trim();
             string mail = tbxMail.Text.Trim();
             string pass = tbxPass.Text.Trim();
-            string gender = cbxGender.SelectedItem.ToString().Trim();
+            string gender = cbxGender.Text.Trim();
             DateTime birthday = dtpBirthday.Value;
             int branch_id = Convert.ToInt32(cbxBranches.SelectedValue);
-
-            if (flname != "" && phone != "" && mail != "" && pass != "" && gender != "" && birthday != null)
+            string adress = rtbxAdress.Text.Trim();
+            if (flname != "" && phone != "" && mail != "" && pass != "" && gender != "" && birthday != null && adress != "")
             {
-                Teacher teacher = new Teacher { Name = flname, Phone_Number = phone, Mail = mail, Password = pass, Gender = gender, Date_Of_Birth = birthday, BranchID = branch_id };
+                Teacher teacher = new Teacher { Name = flname, Phone_Number = phone, Mail = mail, Password = pass, Gender = gender, Date_Of_Birth = birthday, Adress = adress, BranchID = branch_id };
                 _teacherService.Add(teacher);
                 checkTeacher(teacher.Mail);
             }
+            else
+                MessageBox.Show("Boş alan bırakmayın", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
         void checkTeacher(string mail)
         {
@@ -58,6 +60,17 @@ namespace FinalProject.FormUI.TeacherForms
         private void TeacherAddForm_Load(object sender, EventArgs e)
         {
             LoadBranches();
+        }
+
+        private void TeacherAddForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Router.teacherMainForm.Show();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Router.teacherMainForm.Show();
+            this.Hide();
         }
     }
 }

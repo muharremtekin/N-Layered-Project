@@ -41,14 +41,16 @@ namespace FinalProject.FormUI.TeacherForms
             this.aragörüntüleToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.veliToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ekleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.silgüncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aragörüntüleToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.derslerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ekleToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.silgüncelleToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.aragörüntüleToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.çıkışYapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dgwLessonTaught = new System.Windows.Forms.DataGridView();
+            this.lblUserDetails = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tümİşlemlerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwLessonTaught)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -62,9 +64,9 @@ namespace FinalProject.FormUI.TeacherForms
             this.çıkışYapToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(1, 6, 1, 1);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(1, 4, 1, 1);
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(690, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(776, 34);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -91,6 +93,7 @@ namespace FinalProject.FormUI.TeacherForms
             this.silToolStripMenuItem.Name = "silToolStripMenuItem";
             this.silToolStripMenuItem.Size = new System.Drawing.Size(208, 30);
             this.silToolStripMenuItem.Text = "Sil-güncelle";
+            this.silToolStripMenuItem.Click += new System.EventHandler(this.silToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -102,6 +105,7 @@ namespace FinalProject.FormUI.TeacherForms
             this.aragörüntüleToolStripMenuItem.Name = "aragörüntüleToolStripMenuItem";
             this.aragörüntüleToolStripMenuItem.Size = new System.Drawing.Size(208, 30);
             this.aragörüntüleToolStripMenuItem.Text = "Ara/görüntüle";
+            this.aragörüntüleToolStripMenuItem.Click += new System.EventHandler(this.aragörüntüleToolStripMenuItem_Click);
             // 
             // öğrenciToolStripMenuItem
             // 
@@ -118,25 +122,26 @@ namespace FinalProject.FormUI.TeacherForms
             this.öğrenciEkleToolStripMenuItem.Name = "öğrenciEkleToolStripMenuItem";
             this.öğrenciEkleToolStripMenuItem.Size = new System.Drawing.Size(203, 30);
             this.öğrenciEkleToolStripMenuItem.Text = "Ekle";
+            this.öğrenciEkleToolStripMenuItem.Click += new System.EventHandler(this.öğrenciEkleToolStripMenuItem_Click);
             // 
             // öğrenciToolStripMenuItem1
             // 
             this.öğrenciToolStripMenuItem1.Name = "öğrenciToolStripMenuItem1";
             this.öğrenciToolStripMenuItem1.Size = new System.Drawing.Size(203, 30);
             this.öğrenciToolStripMenuItem1.Text = "Sil-güncelle";
+            this.öğrenciToolStripMenuItem1.Click += new System.EventHandler(this.öğrenciToolStripMenuItem1_Click);
             // 
             // aragörüntüleToolStripMenuItem1
             // 
             this.aragörüntüleToolStripMenuItem1.Name = "aragörüntüleToolStripMenuItem1";
             this.aragörüntüleToolStripMenuItem1.Size = new System.Drawing.Size(203, 30);
             this.aragörüntüleToolStripMenuItem1.Text = "Ara/görüntüle";
+            this.aragörüntüleToolStripMenuItem1.Click += new System.EventHandler(this.aragörüntüleToolStripMenuItem1_Click);
             // 
             // veliToolStripMenuItem
             // 
             this.veliToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ekleToolStripMenuItem,
-            this.silgüncelleToolStripMenuItem,
-            this.aragörüntüleToolStripMenuItem2});
+            this.ekleToolStripMenuItem});
             this.veliToolStripMenuItem.Name = "veliToolStripMenuItem";
             this.veliToolStripMenuItem.Size = new System.Drawing.Size(55, 29);
             this.veliToolStripMenuItem.Text = "Veli";
@@ -144,69 +149,97 @@ namespace FinalProject.FormUI.TeacherForms
             // ekleToolStripMenuItem
             // 
             this.ekleToolStripMenuItem.Name = "ekleToolStripMenuItem";
-            this.ekleToolStripMenuItem.Size = new System.Drawing.Size(203, 30);
-            this.ekleToolStripMenuItem.Text = "Ekle";
-            // 
-            // silgüncelleToolStripMenuItem
-            // 
-            this.silgüncelleToolStripMenuItem.Name = "silgüncelleToolStripMenuItem";
-            this.silgüncelleToolStripMenuItem.Size = new System.Drawing.Size(203, 30);
-            this.silgüncelleToolStripMenuItem.Text = "Sil-güncelle";
-            // 
-            // aragörüntüleToolStripMenuItem2
-            // 
-            this.aragörüntüleToolStripMenuItem2.Name = "aragörüntüleToolStripMenuItem2";
-            this.aragörüntüleToolStripMenuItem2.Size = new System.Drawing.Size(203, 30);
-            this.aragörüntüleToolStripMenuItem2.Text = "Ara/görüntüle";
+            this.ekleToolStripMenuItem.Size = new System.Drawing.Size(192, 30);
+            this.ekleToolStripMenuItem.Text = "Tüm işlemler";
+            this.ekleToolStripMenuItem.Click += new System.EventHandler(this.ekleToolStripMenuItem_Click);
             // 
             // derslerToolStripMenuItem
             // 
             this.derslerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ekleToolStripMenuItem1,
-            this.silgüncelleToolStripMenuItem1,
-            this.aragörüntüleToolStripMenuItem3});
+            this.tümİşlemlerToolStripMenuItem});
             this.derslerToolStripMenuItem.Name = "derslerToolStripMenuItem";
             this.derslerToolStripMenuItem.Size = new System.Drawing.Size(84, 29);
             this.derslerToolStripMenuItem.Text = "Dersler";
-            // 
-            // ekleToolStripMenuItem1
-            // 
-            this.ekleToolStripMenuItem1.Name = "ekleToolStripMenuItem1";
-            this.ekleToolStripMenuItem1.Size = new System.Drawing.Size(203, 30);
-            this.ekleToolStripMenuItem1.Text = "Ekle";
-            // 
-            // silgüncelleToolStripMenuItem1
-            // 
-            this.silgüncelleToolStripMenuItem1.Name = "silgüncelleToolStripMenuItem1";
-            this.silgüncelleToolStripMenuItem1.Size = new System.Drawing.Size(203, 30);
-            this.silgüncelleToolStripMenuItem1.Text = "Sil-güncelle";
-            // 
-            // aragörüntüleToolStripMenuItem3
-            // 
-            this.aragörüntüleToolStripMenuItem3.Name = "aragörüntüleToolStripMenuItem3";
-            this.aragörüntüleToolStripMenuItem3.Size = new System.Drawing.Size(203, 30);
-            this.aragörüntüleToolStripMenuItem3.Text = "Ara/görüntüle";
             // 
             // çıkışYapToolStripMenuItem
             // 
             this.çıkışYapToolStripMenuItem.Name = "çıkışYapToolStripMenuItem";
             this.çıkışYapToolStripMenuItem.Size = new System.Drawing.Size(98, 29);
             this.çıkışYapToolStripMenuItem.Text = "Çıkış yap";
+            this.çıkışYapToolStripMenuItem.Click += new System.EventHandler(this.çıkışYapToolStripMenuItem_Click);
+            // 
+            // dgwLessonTaught
+            // 
+            this.dgwLessonTaught.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwLessonTaught.Location = new System.Drawing.Point(6, 132);
+            this.dgwLessonTaught.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgwLessonTaught.Name = "dgwLessonTaught";
+            this.dgwLessonTaught.Size = new System.Drawing.Size(767, 218);
+            this.dgwLessonTaught.TabIndex = 1;
+            // 
+            // lblUserDetails
+            // 
+            this.lblUserDetails.AutoSize = true;
+            this.lblUserDetails.ForeColor = System.Drawing.Color.LimeGreen;
+            this.lblUserDetails.Location = new System.Drawing.Point(5, 18);
+            this.lblUserDetails.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUserDetails.Name = "lblUserDetails";
+            this.lblUserDetails.Size = new System.Drawing.Size(88, 16);
+            this.lblUserDetails.TabIndex = 3;
+            this.lblUserDetails.Text = "Genel Bilgiler";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(265, 99);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 16);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Öğrenciler";
+            // 
+            // tümİşlemlerToolStripMenuItem
+            // 
+            this.tümİşlemlerToolStripMenuItem.Name = "tümİşlemlerToolStripMenuItem";
+            this.tümİşlemlerToolStripMenuItem.Size = new System.Drawing.Size(192, 30);
+            this.tümİşlemlerToolStripMenuItem.Text = "Tüm işlemler";
+            this.tümİşlemlerToolStripMenuItem.Click += new System.EventHandler(this.tümİşlemlerToolStripMenuItem_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lblUserDetails);
+            this.groupBox1.Location = new System.Drawing.Point(12, 37);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 78);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Öğretmen bilgileri";
             // 
             // TeacherMainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(690, 428);
+            this.ClientSize = new System.Drawing.Size(776, 359);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.dgwLessonTaught);
             this.Controls.Add(this.menuStrip1);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "TeacherMainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TeacherMainForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TeacherMainForm_FormClosing);
             this.Load += new System.EventHandler(this.TeacherMainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwLessonTaught)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,13 +258,13 @@ namespace FinalProject.FormUI.TeacherForms
         private System.Windows.Forms.ToolStripMenuItem öğrenciEkleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem öğrenciToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem ekleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem silgüncelleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ekleToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem silgüncelleToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem aragörüntüleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aragörüntüleToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem aragörüntüleToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem aragörüntüleToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem çıkışYapToolStripMenuItem;
+        private System.Windows.Forms.DataGridView dgwLessonTaught;
+        private System.Windows.Forms.Label lblUserDetails;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ToolStripMenuItem tümİşlemlerToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

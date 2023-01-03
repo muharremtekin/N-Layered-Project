@@ -62,5 +62,16 @@ namespace FinalProject.FormUI.TeacherForms
         {
             LoadTeachers();
         }
+
+        private void SearchTeacherForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Router.teacherMainForm.Show();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Router.teacherMainForm.Show();
+            this.Hide();
+        }
     }
 }

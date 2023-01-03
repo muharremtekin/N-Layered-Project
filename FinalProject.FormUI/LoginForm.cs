@@ -1,7 +1,9 @@
 ﻿using FinalProject.Business.Abstract;
 using FinalProject.Business.Concrete;
 using FinalProject.DataAccess.Concrete;
+using FinalProject.Entities.Abstract;
 using FinalProject.Entities.Concrete;
+using FinalProject.FormUI.Student_Forms;
 using FinalProject.FormUI.TeacherForms;
 using System;
 using System.Collections.Generic;
@@ -26,8 +28,6 @@ namespace FinalProject.FormUI
         }
         ITeacherService _teacherService;
         IStudentService _studentService;
-        public object currentUser;
-
         private void btnStudentLogin_Click(object sender, EventArgs e)
         {
             string mail = tbxMail.Text;
@@ -52,9 +52,8 @@ namespace FinalProject.FormUI
                 if (user.Count > 0)
                 {
                     MessageBox.Show("Hoş geldiniz " + user[0].Name);
-                    currentUser = user[0];
-                    TeacherMainForm teacherMainForm = new TeacherMainForm();
-                    teacherMainForm.Show();
+                    CurrentUser.currentTeacher = user[0];
+                    Router.teacherMainForm.Show();
                     this.Hide();
                 }
                 else
@@ -71,13 +70,19 @@ namespace FinalProject.FormUI
                 if (user.Count > 0)
                 {
                     MessageBox.Show(user[0].Name);
-                    currentUser = user[0];
+                    CurrentUser.currentStudent = user[0];
+                    this.Hide();
                 }
                 else
                     MessageBox.Show("Kullanıcı adı ya da şifre hatalı!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
                 MessageBox.Show("mail ya da şifre boş olamaz", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit(e);
         }
     }
 }

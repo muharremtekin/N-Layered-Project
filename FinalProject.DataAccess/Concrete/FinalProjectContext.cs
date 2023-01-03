@@ -9,6 +9,9 @@ namespace FinalProject.DataAccess.Concrete
         public DbSet<Parent> Parents { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
         public DbSet<Branch> Branches { get; set; }
+        public DbSet<Lesson> Lessons { get; set; }
+        public DbSet<LessonsLearn> LessonLearns { get; set; }
+        public DbSet<LessonsTaught> lessonsTaughts { get; set; }
 
     }
 }

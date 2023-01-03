@@ -1,4 +1,5 @@
-﻿using FinalProject.Entities.Abstract;
+﻿using FinalProject.DataAccess.Abstract;
+using FinalProject.Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +8,7 @@ using System.Threading.Tasks;
 
 namespace FinalProject.DataAccess.Concrete
 {
-    public class Lesson : IEntity
+    public class EfLessonDal : EfEntityRepositoryBase<Lesson, FinalProjectContext>, ILessonDal
     {
-        public int ID { get; set; }
-        public string Name { get; set; }
     }
 }

@@ -9,7 +9,10 @@ namespace FinalProject.Entities.Concrete
 {
     public class LessonsTaught : IEntity
     {
+        public int ID { get; set; }
         public int LessonID { get; set; }
         public int TeacherID { get; set; }
+        public string LessonName { get; set; }
+        public string TeacherName { get; set; }
     }
 }
