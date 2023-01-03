@@ -6,7 +6,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -29,6 +31,7 @@ namespace FinalProject.FormUI.TeacherForms
         {
             LoadUSerDetail();
             LoadLessonTaught();
+            fetchapidata();
         }
 
         private void öğretmenEkleToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -44,6 +47,30 @@ namespace FinalProject.FormUI.TeacherForms
         void LoadUSerDetail()
         {
             lblUserDetails.Text = $"Ad-Soyad: {CurrentUser.currentTeacher.Name}\nEmail: {CurrentUser.currentTeacher.Mail}\nTelefon: {CurrentUser.currentTeacher.Phone_Number}";
+        }
+
+        void fetchapidata()
+        {
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create("https://api.openweathermap.org/data/2.5/weather?q=bursa&units=metric&lang=tr&appid=e83b1748c912441f42a45d625ff37c03");
+            httpWebRequest.ContentType = "application/json";
+            httpWebRequest.Method = "POST";
+
+            try
+            {
+
+                var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+
+                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                {
+                    var result = streamReader.ReadToEnd();
+                    var data = Newtonsoft.Json.JsonConvert.DeserializeObject<dynamic>(result);
+                    label1.Text = $"Bursa: {data["main"]["temp"].ToString()} derece";
+
+                }
+
+            }
+            catch { }
+
         }
 
         private void silToolStripMenuItem_Click(object sender, EventArgs e)

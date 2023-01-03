@@ -71,6 +71,7 @@ namespace FinalProject.FormUI
                 {
                     MessageBox.Show(user[0].Name);
                     CurrentUser.currentStudent = user[0];
+                    Router.studentMainForm.Show();
                     this.Hide();
                 }
                 else
